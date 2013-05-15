@@ -252,9 +252,16 @@ echo("
 							<input type=\"text\" name=\"new_keyword\" class=\"input-medium click-clear\" ".$disabled." placeholder=\"Add new keyword...\">
 						</div>
 					</div>
-					<a href=\"#\" name=\"flag\" class=\"btn btn-danger col-span-2".($track->is_flagged()? " active" : "")."\"><i class=\"icon-warning-sign icon-white\"></i> Flag for censorship</a>
-					<hr />
-					".(Session::is_group_user("Music Admin")? "<a href=\"".SITE_LINK_REL."lib/preview/download.php?id=".$track->get_id()."\" class=\"btn btn-primary col-span-2\"><i class=\"icon-download-alt icon-white\"></i> Download FLAC</a>" : "")."
+					<div class=\"control-group\">
+						<hr />
+						<div class=\"controls\">
+							<a href=\"#\" name=\"flag\" class=\"btn btn-danger".($track->is_flagged()? " active" : "")."\"><i class=\"icon-warning-sign icon-white\"></i> Flag for censorship</a>
+						</div>
+						<hr />
+						<div class=\"controls\">
+							".(Session::is_group_user("Music Admin")? "<a href=\"".SITE_LINK_REL."lib/preview/download.php?id=".$track->get_id()."\" class=\"btn btn-primary\"><i class=\"icon-download-alt icon-white\"></i> Download FLAC</a>" : "")."
+						</div>					
+					</div>
 				</div>
 			</div>
 		</fieldset>
