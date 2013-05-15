@@ -61,6 +61,7 @@ echo("
 				});
 			});
 
+			/*commented out due to breaking audio jPlayer
 			$('.keyword-remove').live(\"click\", function(event) {
 				event.preventDefault();
 				parent = $(this).parent().parent();
@@ -72,7 +73,7 @@ echo("
 						$('.alert-message').show('fast').alert();
 					}
 				})
-			});
+			});*/
 
 			$('[name=flag]').click(function() {
 				event.preventDefault();
