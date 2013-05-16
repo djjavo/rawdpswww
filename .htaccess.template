@@ -1,0 +1,8 @@
+#set this to your DPS website installation path:
+php_value include_path /mnt/www/dev.radio.warwick.ac.uk/dps/jamesvh/dps-www/includes
+
+RewriteEngine  on
+RewriteBase /
+
+RewriteCond %{DOCUMENT_ROOT}$1.php -f
+RewriteRule ^(.*)/?$ $1.php [L]

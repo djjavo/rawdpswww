@@ -24,7 +24,7 @@ echo("
 				submit.button('loading');
 				submit.after('<img src=\"".SITE_LINK_REL."img/ajax-loader.gif\" id=\"detail-load\" style=\"position: relative; top: 5px; left: 5px;\"/>');
 				$.ajax({
-					url: '".SITE_LINK_REL."ajax/track-detail-update',
+					url: '".SITE_LINK_REL."ajax/track-detail-update.php',
 					data: $(this).serialize(),
 					type: 'POST',
 					error: function(xhr,text,error) {
@@ -35,6 +35,7 @@ echo("
 						submit.button('reset');
 					},
 					success: function(data,text,xhr) {
+						console.log('foo');
 						values = $.parseJSON(data);
 						submit.button('reset');
 						$('#detail-load').remove();
