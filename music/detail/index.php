@@ -24,7 +24,7 @@ echo("
 				submit.button('loading');
 				submit.after('<img src=\"".SITE_LINK_REL."img/ajax-loader.gif\" id=\"detail-load\" style=\"position: relative; top: 5px; left: 5px;\"/>');
 				$.ajax({
-					url: '".SITE_LINK_REL."ajax/track-detail-update.php',
+					url: '".SITE_LINK_REL."ajax/track-detail-update',
 					data: $(this).serialize(),
 					type: 'POST',
 					error: function(xhr,text,error) {
